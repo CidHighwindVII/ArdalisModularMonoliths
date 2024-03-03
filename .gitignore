@@ -18,5 +18,5 @@
 *.user
 
 # Compiled binary files
-/bin/
-/obj/
+**/bin/
+**/obj/
