@@ -1,0 +1,22 @@
+# Visual Studio related files
+.vscode/
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+*.suo
+*.gpState
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.suo
+*.suo
+*.user
+*.user
+
+# Compiled binary files
+/bin/
+/obj/
