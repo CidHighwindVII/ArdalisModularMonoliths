@@ -1,45 +1,5 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
-using RiberBooks.Books;
-
 namespace RiverBooks.Books;
-
-internal class EfBookRepository : IBookRepository
-{
-    private readonly BookDbContext _dbContext;
-
-    public EfBookRepository(BookDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
-    public Task AddAsync(Book book)
-    {
-        _dbContext.Add(book);
-        return Task.CompletedTask;
-    }
-
-    public Task DeleteAsync(Book book)
-    {
-        _dbContext.Remove(book);
-        return Task.CompletedTask;
-    }
-
-    public async Task<Book?> GetByIdAsync(Guid id)
-    {
-        return await _dbContext!.Books.FindAsync(id);
-    }
-
-    public async Task<List<Book>> ListAsync()
-    {
-        return await _dbContext!.Books.ToListAsync();
-    }
-
-    public async Task SaveChangesAsync()
-    {
-        await _dbContext.SaveChangesAsync();
-    }
-}
 
 internal class BookService : IBookService
 {
@@ -62,7 +22,7 @@ internal class BookService : IBookService
     {
         var bookToDelete = await _bookRepository.GetByIdAsync(id);
 
-        if(bookToDelete is not null)
+        if (bookToDelete is not null)
         {
             await _bookRepository.DeleteAsync(bookToDelete);
             await _bookRepository.SaveChangesAsync();
@@ -73,8 +33,7 @@ internal class BookService : IBookService
     {
         var book = await _bookRepository.GetByIdAsync(id);
 
-
-        // TODO: handle not found case 
+        // TODO: handle not found case
 
         return new BookDto(book!.Id, book.Title, book.Author, book.Price);
     }
@@ -82,19 +41,19 @@ internal class BookService : IBookService
     public async Task<List<BookDto>> ListBooksAsync()
     {
         var books = (await _bookRepository.ListAsync())
-            .Select(book => new BookDto(book.Id, book.Title, book.Author, book.Price))
-            .ToList();
+          .Select(book => new BookDto(book.Id, book.Title, book.Author, book.Price))
+          .ToList();
 
         return books;
     }
 
     public async Task UpdateBookPriceAsync(Guid bookId, decimal newPrice)
     {
-        // TODO: Validate price
+        // validate the price
 
         var book = await _bookRepository.GetByIdAsync(bookId);
 
-        // TODO: handle not found case 
+        // handle not found case
 
         book!.UpdatePrice(newPrice);
         await _bookRepository.SaveChangesAsync();

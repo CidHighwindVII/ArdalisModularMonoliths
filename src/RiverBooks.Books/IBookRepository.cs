@@ -1,8 +1,6 @@
-﻿using RiberBooks.Books;
+﻿namespace RiverBooks.Books;
 
-namespace RiverBooks.Books;
-
-internal interface IBookRepository : IReadOnlyRepository
+internal interface IBookRepository : IReadOnlyBookRepository
 {
     Task AddAsync(Book book);
     Task DeleteAsync(Book book);

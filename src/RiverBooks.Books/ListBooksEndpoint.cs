@@ -3,7 +3,8 @@
 namespace RiverBooks.Books;
 
 // REPR design pattern - Request Endpoint Response
-internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
+internal class ListBooksEndpoint(IBookService bookService) :
+    EndpointWithoutRequest<ListBooksResponse>
 {
     private readonly IBookService _bookService = bookService;
 
@@ -13,10 +14,14 @@ internal class ListBooksEndpoint(IBookService bookService) : EndpointWithoutRequ
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(CancellationToken cancellationToken = default)
+    public override async Task HandleAsync(
+               CancellationToken cancellationToken = default)
     {
         var books = await _bookService.ListBooksAsync();
 
-        await SendAsync(new ListBooksResponse(books));
+        await SendAsync(new ListBooksResponse()
+        {
+            Books = books
+        });
     }
 }

@@ -1,6 +1,4 @@
-﻿using RiberBooks.Books;
-
-namespace RiverBooks.Books;
+﻿namespace RiverBooks.Books;
 
 internal interface IReadOnlyRepository
 {
