@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiverBooks.Web", "RiverBooks.Web\RiverBooks.Web.csproj", "{4D6FF091-73F1-45B0-8C05-5B8A7C15059B}"
 EndProject
@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Books.Test", "RiverBooks.Books.Test\RiverBooks.Books.Test.csproj", "{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FF51A9DF-E0E7-4E19-B0D4-0AB127BBC523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF51A9DF-E0E7-4E19-B0D4-0AB127BBC523}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF51A9DF-E0E7-4E19-B0D4-0AB127BBC523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

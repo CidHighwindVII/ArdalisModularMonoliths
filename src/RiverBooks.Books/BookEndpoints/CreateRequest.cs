@@ -1,6 +1,6 @@
-﻿namespace RiverBooks.Books;
+﻿namespace RiverBooks.Books.BookEndpoints;
 
-public class CreateBookRequest
+public class CreateRequest
 {
     public Guid? Id { get; set; }
     public string Title { get; set; } = string.Empty;

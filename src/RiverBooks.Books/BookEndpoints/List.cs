@@ -1,10 +1,10 @@
 ﻿using FastEndpoints;
 
-namespace RiverBooks.Books;
+namespace RiverBooks.Books.BookEndpoints;
 
 // REPR design pattern - Request Endpoint Response
-internal class ListBooksEndpoint(IBookService bookService) :
-    EndpointWithoutRequest<ListBooksResponse>
+internal class List(IBookService bookService) :
+    EndpointWithoutRequest<ListResponse>
 {
     private readonly IBookService _bookService = bookService;
 
@@ -18,7 +18,7 @@ internal class ListBooksEndpoint(IBookService bookService) :
     {
         var books = await _bookService.ListBooksAsync();
 
-        await SendAsync(new ListBooksResponse()
+        await SendAsync(new ListResponse()
         {
             Books = books
         });

@@ -1,8 +1,8 @@
 ﻿using FastEndpoints;
 
-namespace RiverBooks.Books;
+namespace RiverBooks.Books.BookEndpoints;
 
-internal class DeleteBookEndpoint(IBookService _bookService) : Endpoint<DeleteBookRequest>
+internal class Delete(IBookService _bookService) : Endpoint<DeleteRequest>
 {
     public override void Configure()
     {
@@ -10,7 +10,7 @@ internal class DeleteBookEndpoint(IBookService _bookService) : Endpoint<DeleteBo
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(DeleteBookRequest request, CancellationToken cancellationToken)
+    public override async Task HandleAsync(DeleteRequest request, CancellationToken cancellationToken)
     {
         // TODO: Handle not found
         await _bookService.DeleteBookAsync(request.Id);

@@ -1,6 +1,6 @@
-﻿namespace RiverBooks.Books;
+﻿namespace RiverBooks.Books.BookEndpoints;
 
-public class ListBooksResponse
+public class ListResponse
 {
     public List<BookDto> Books { get; set; } = new List<BookDto>();
 }
