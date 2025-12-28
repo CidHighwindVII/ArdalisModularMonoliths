@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11222.15 d18.0
+VisualStudioVersion = 18.0.11222.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiverBooks.Web", "RiverBooks.Web\RiverBooks.Web.csproj", "{4D6FF091-73F1-45B0-8C05-5B8A7C15059B}"
 EndProject
@@ -14,6 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Books.Test", "RiverBooks.Books.Test\RiverBooks.Books.Test.csproj", "{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Books Module", "Books Module", "{EC33CDDB-B313-4839-87B4-CD6720C1FD08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users Module", "Users Module", "{4DD17B91-701B-49DE-9C1A-67EAFFBF012E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverBooks.Users", "RiverBooks.Users\RiverBooks.Users.csproj", "{B53D4978-D12A-42D7-83CC-1801A51CDB74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,18 @@ Global
 		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53D4978-D12A-42D7-83CC-1801A51CDB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53D4978-D12A-42D7-83CC-1801A51CDB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53D4978-D12A-42D7-83CC-1801A51CDB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53D4978-D12A-42D7-83CC-1801A51CDB74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF51A9DF-E0E7-4E19-B0D4-0AB127BBC523} = {EC33CDDB-B313-4839-87B4-CD6720C1FD08}
+		{BE2FAADF-EF5E-4FB0-A3AB-8C0E924782B0} = {EC33CDDB-B313-4839-87B4-CD6720C1FD08}
+		{B53D4978-D12A-42D7-83CC-1801A51CDB74} = {4DD17B91-701B-49DE-9C1A-67EAFFBF012E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E0CD6BB-A43C-44EE-89D7-6B9407FC3409}
